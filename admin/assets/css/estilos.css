@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+}
+
+
+.login {
+    width: 100%;
+    min-height: 700px;
+    overflow: hidden;
+}
+
+.login .row {
+    margin: 0;
+}
+
+.lado-izquierdo {
+    min-height: 700px;
+    padding: 45px 55px;
+    background-image:
+        linear-gradient(rgba(3, 32, 24, 0.45), rgba(3, 32, 24, 0.65)),
+        url("../img/edi.png");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.logo-login {
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo-login:hover {
+    color: #ffffff;
+}
+
+
+.texto-bienvenida {
+    width: 70%;
+    margin-top: 210px;
+}
+
+.texto-bienvenida h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.texto-bienvenida p {
+    width: 90%;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+.seguridad {
+    width: 75%;
+    margin-top: 170px;
+}
+
+.seguridad h2 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.seguridad p {
+    width: 85%;
+    margin-top: 15px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+.lado-derecho {
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8faf8;
+}
+
+
+.formulario-login {
+    width: 58%;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
+}
+
+.formulario-login h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.subtitulo-login {
+    margin-bottom: 30px;
+    color: #666666;
+    font-size: 14px;
+}
+
+
+.formulario-login label {
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    height: 50px;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.form-control:focus {
+    border-color: #0b5c38;
+    box-shadow: none;
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opciones label {
+    margin-left: 5px;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.opciones a {
+    color: #0b5c38;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.opciones a:hover {
+    text-decoration: underline;
+}
+
+
+.boton-ingresar {
+    width: 100%;
+    height: 50px;
+    background-color: #08783f;
+    color: #ffffff;
+    border: 1px solid #08783f;
+    border-radius: 7px;
+}
+
+.boton-ingresar:hover {
+    background-color: #065f32;
+    color: #ffffff;
+}
+
+.continuar {
+    text-align: center;
+    font-size: 13px;
+    color: #555555;
+}
+
+.boton-social {
+    width: 100%;
+    height: 48px;
+    background-color: #ffffff;
+    color: #111111;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+}
+
+.boton-social:hover {
+    background-color: #f5f5f5;
+}
+
+.registro-login {
+    text-align: center;
+    font-size: 14px;
+}
+
+.registro-login a {
+    color: #0b5c38;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-login {
+    width: 100%;
+    padding: 30px 0;
+    background-color: #064b31;
+    color: #ffffff;
+}
+
+.footer-login h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.footer-login h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-login p {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.footer-login a {
+    margin-left: 15px;
+    color: #ffffff;
+    font-size: 12px;
+    text-decoration: none;
+}
