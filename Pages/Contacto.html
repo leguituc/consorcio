@@ -71,10 +71,8 @@
                             <input type="email" class="form-control" id="email">
                         </div>
                         <div class="mb-3">
-                            <label for="rubro" class="form-label">Tipo</label>
-                            <select class="form-select" id="rubro">
-                                <option>Propietario</option>
-                                <option>Inquilino</option>
+                            <label for="rubro" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar</button>
@@ -84,80 +82,50 @@
         </div>
         <hr>
         <div class="p-3 mb-2 bg-primary text-white">ADMINISTRACION</div>
-        <form class="row g-3 needs-validation" novalidate>
-            <div class="col-md-4">
-                <label for="validationCustom01" class="form-label">Nombre y Apellido</label>
-                <input type="text" class="form-control" id="validationCustom01" value="" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="col-md-4">
-                <label for="validationCustom02" class="form-label">DNI</label>
-                <input type="text" class="form-control" id="validationCustom02" value="" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="col-md-4">
-                <label for="validationCustomUsername" class="form-label">Correo electronico</label>
-                <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control" id="validationCustomUsername"
-                        aria-describedby="inputGroupPrepend" required>
-                    <div class="invalid-feedback">
-                        Please choose a username.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <label for="validationCustom03" class="form-label">Unidad</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
-                <div class="invalid-feedback">
-                    Please provide a valid city.
-                </div>
-            </div>
-            <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">Cargo que ocupa</label>
-                <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value=""></option>
-                    <option>Presidente</option>
-                    <option>Secretario</option>
-                    <option>Tesorero</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please select a valid state.
-                </div>
-            </div>
-            <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">Telefono</label>
-                <input type="text" class="form-control" id="validationCustom05" required>
-                <div class="invalid-feedback">
-                    Please provide a valid zip.
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                        Acepta el cargo para que ha sido designado
-                    </label>
-                    <div class="invalid-feedback">
-                        You must agree before submitting.
-                    </div>
-                </div>
-            </div>
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Actualiza cargo</button>
-            </div>
-        </form>
+        <table class="table table-bordered border-primary">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cargo</th>
+                    <th scope="col">Nombre y Apellido</th>
+                    <th scope="col">Correo electronico</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Presidente</td>
+                    <td>Nicolas Abregu</td>
+                    <td>nabregu@gmail.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Secretario</td>
+                    <td>Carolina Nuñez</td>
+                    <td>caronunez@gmail.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Tesorero</td>
+                    <td>Nelson Custodio</td>
+                    <td>ncusto34@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
         <hr>
         <div class="p-3 mb-2 bg-primary text-white">MAPA DE UBICACION</div>
-        
-                 <br>   
-                 <a class="btn btn-primary" href="https://www.google.com/maps" role="button">Ver mapa de su Barrio</a>
-                    </div>
-                    <hr>
+
+        <br>
+        <div class="container my-4">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.715764436085!2d-65.25360032478031!3d-26.785328876723284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225daa701d35a3%3A0xb62d7224e34a81bd!2sBarrio%20Privado%20Alto%20Peru!5e0!3m2!1ses!2sar!4v1785907314164!5m2!1ses!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>" title="Ubicación en el mapa"
+                allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        <hr>
     </main>
 </body>
 <footer class="bg-dark text-light pt-5 pb-3 mt-5">
