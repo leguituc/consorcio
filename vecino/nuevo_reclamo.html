@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Reclamo - Habitat+</title>
+    <!-- Referencia a Bootstrap CSS (Azul Clásico) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar Admin en Azul Clásico de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="../index.html">HABITAT+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="reclamos.html">Reclamos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="espacios.html">Espacios Comunes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                    <li class="nav-item dropdown ms-lg-2">
+                        <a class="nav-link dropdown-toggle text-white fw-semibold" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            👤 Juan Pérez
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="perfil.html">👤 Mi Perfil</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="login.html">🚪 Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container py-5">
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-7">
+                
+                <a href="reclamos.html" class="btn btn-outline-secondary btn-sm mb-3">
+                    &larr; Volver al listado de reclamos
+                </a>
+
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white py-3 border-bottom">
+                        <h2 class="h4 text-primary fw-bold mb-0">Registrar Nuevo Reclamo</h2>
+                        <p class="text-muted small mb-0">Completá el formulario para enviar una nueva incidencia a la administración.</p>
+                    </div>
+
+                    <div class="card-body p-4">
+                        <!-- El formulario redirige a Error 404 al presionar Enviar Reclamo -->
+                        <form action="404.html" method="GET">
+                            
+                            <!-- Categoría -->
+                            <div class="mb-3">
+                                <label for="categoria" class="form-label fw-semibold">Categoría <span class="text-danger">*</span></label>
+                                <select class="form-select" id="categoria" name="categoria" required>
+                                    <option value="" selected disabled>Seleccionar una categoría</option>
+                                    <option value="plomeria">Plomería</option>
+                                    <option value="ascensores">Ascensores</option>
+                                    <option value="electricidad">Electricidad</option>
+                                    <option value="seguridad">Seguridad</option>
+                                    <option value="limpieza">Limpieza</option>
+                                    <option value="areas_comunes">Áreas Comunes</option>
+                                    <option value="ruidos_molestos">Ruidos Molestos</option>
+                                    <option value="mantenimiento">Mantenimiento</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <!-- Asunto -->
+                            <div class="mb-3">
+                                <label for="asunto" class="form-label fw-semibold">Asunto <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Ej: Filtración de agua en el hall principal" required>
+                            </div>
+
+                            <!-- Descripción -->
+                            <div class="mb-3">
+                                <label for="descripcion" class="form-label fw-semibold">Descripción <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="descripcion" name="descripcion" rows="4" placeholder="Detallá lo sucedido, ubicación exacta y cualquier información relevante..." required></textarea>
+                            </div>
+
+                            <!-- Fecha -->
+                            <div class="mb-3">
+                                <label for="fecha" class="form-label fw-semibold">Fecha <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="fecha" name="fecha" required>
+                            </div>
+
+                            <!-- Imagen (simulada) -->
+                            <div class="mb-4">
+                                <label for="imagen" class="form-label fw-semibold">Imagen (simulada)</label>
+                                <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">
+                                <div class="form-text">Podés adjuntar una fotografía de la incidencia (Formatos: JPG, PNG).</div>
+                            </div>
+
+                            <!-- Botones -->
+                            <div class="d-flex justify-content-end gap-2 pt-2 border-top">
+                                <a href="reclamos.html" class="btn btn-outline-secondary px-4">Cancelar</a>
+                                <button type="submit" class="btn btn-primary px-4 fw-semibold">Enviar Reclamo</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acción Social y Campañas Comunitarias - Habitat+</title>
+    <!-- Referencia a Bootstrap CSS (Azul Clásico) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .campaign-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .campaign-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+        .campaign-img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar Vecino en Azul Clásico de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="../index.html">HABITAT+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="portal.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reclamos.html">Mis Reclamos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="espacios.html">Espacios Comunes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="seguridad.html">Seguridad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="infraestructura.html">Obras</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="accion_social.html">Acción Social</a></li>
+                    <li class="nav-item dropdown ms-lg-2">
+                        <a class="nav-link dropdown-toggle text-white fw-semibold" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            👤 Juan Pérez
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="perfil.html">👤 Mi Perfil</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="cerrar_sesion.html">🚪 Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container py-5">
+
+        <!-- Encabezado de la Sección -->
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 pb-3 border-bottom">
+            <div>
+                <h1 class="h3 text-primary fw-bold mb-1">Acción Social y Campañas Comunitarias</h1>
+                <p class="text-muted mb-0">Sumate a las iniciativas comunitarias del consorcio para colaborar, reciclar y compartir.</p>
+            </div>
+            <span class="badge bg-primary px-3 py-2 fs-6 mt-2 mt-md-0">Comunidad Conectada</span>
+        </div>
+
+        <!-- Grilla de Campañas Comunitarias -->
+        <div class="row g-4 mb-5">
+
+            <!-- 1. Donaciones -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card campaign-card shadow-sm h-100 bg-white">
+                    <img src="../public/images/sum.jpg" class="card-img-top campaign-img" alt="Campaña de Donaciones">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span class="badge bg-danger bg-opacity-10 text-danger fw-semibold w-auto align-self-start mb-2">❤️ Donaciones</span>
+                        <h2 class="h5 fw-bold text-dark mb-2">Colecta Solidaria de Abrigo y Calzado</h2>
+                        <p class="small text-muted mb-4 flex-grow-1">
+                            Estamos recibiendo ropa de abrigo, frazadas y alimentos no perecederos para el comedor comunitario local. Podés dejar tus donaciones en el cesto de Recepción.
+                        </p>
+                        <button type="button" class="btn btn-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#modalParticipar" data-campana="Colecta Solidaria de Abrigo">
+                            Participar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Reciclaje -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card campaign-card shadow-sm h-100 bg-white">
+                    <img src="../public/images/reciclaje.jpg" class="card-img-top campaign-img" alt="Programa de Reciclaje">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span class="badge bg-success bg-opacity-10 text-success fw-semibold w-auto align-self-start mb-2">♻️ Reciclaje</span>
+                        <h2 class="h5 fw-bold text-dark mb-2">Separación de Residuos en Origen</h2>
+                        <p class="small text-muted mb-4 flex-grow-1">
+                            Sumate al programa Verde HABITAT+. Clasificamos plásticos, cartones y latas en contenedores diferenciados en cada piso. ¡Aprendé a separar correctamente!
+                        </p>
+                        <button type="button" class="btn btn-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#modalParticipar" data-campana="Programa de Reciclaje Verde">
+                            Participar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Mascotas Perdidas -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card campaign-card shadow-sm h-100 bg-white">
+                    <img src="../public/images/quincho.jpg" class="card-img-top campaign-img" alt="Mascotas Perdidas y Encontradas">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span class="badge bg-warning bg-opacity-10 text-dark fw-semibold w-auto align-self-start mb-2">🐾 Mascotas</span>
+                        <h2 class="h5 fw-bold text-dark mb-2">Red de Búsqueda de Mascotas</h2>
+                        <p class="small text-muted mb-4 flex-grow-1">
+                            Red comunitaria de auxilio y aviso inmediato ante pérdida o hallazgo de mascotas dentro del complejo. Publicá información y colaborá con los vecinos.
+                        </p>
+                        <button type="button" class="btn btn-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#modalParticipar" data-campana="Red de Búsqueda de Mascotas">
+                            Participar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Eventos Solidarios -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card campaign-card shadow-sm h-100 bg-white">
+                    <img src="../public/images/cancha.jpg" class="card-img-top campaign-img" alt="Eventos Solidarios">
+                    <div class="card-body d-flex flex-column p-4">
+                        <span class="badge bg-info bg-opacity-10 text-primary fw-semibold w-auto align-self-start mb-2">🎉 Eventos</span>
+                        <h2 class="h5 fw-bold text-dark mb-2">Kermesse y Torneo Solidario en el SUM</h2>
+                        <p class="small text-muted mb-4 flex-grow-1">
+                            Jornada comunitaria de juegos, bufete dulce y feria artesanal organizada por los vecinos para recaudar fondos de padrinazgo escolar.
+                        </p>
+                        <button type="button" class="btn btn-primary w-100 fw-semibold" data-bs-toggle="modal" data-bs-target="#modalParticipar" data-campana="Kermesse Solidaria en el SUM">
+                            Participar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Modal Bootstrap para Formulario de Participación -->
+    <div class="modal fade" id="modalParticipar" tabindex="-1" aria-labelledby="modalParticiparLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="modalParticiparLabel">Unirme a la Campaña</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-muted small mb-3">Ingresá tus datos para confirmar tu participación o aporte a esta iniciativa comunitaria.</p>
+                    
+                    <form action="404.html" method="GET">
+                        <div class="mb-3">
+                            <label for="nombreParticipante" class="form-label fw-semibold small">Nombre y Apellido</label>
+                            <input type="text" class="form-control" id="nombreParticipante" value="Juan Pérez" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="unidadParticipante" class="form-label fw-semibold small">Unidad Habitacional</label>
+                            <input type="text" class="form-control" id="unidadParticipante" value="Piso 4 - Depto B" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comentarioParticipante" class="form-label fw-semibold small">¿Cómo deseas colaborar?</label>
+                            <textarea class="form-control" id="comentarioParticipante" rows="3" placeholder="ej. Aporto donaciones de ropa de niño y disponibilidad el sábado..."></textarea>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary fw-semibold">Confirmar Participación</button>
+                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

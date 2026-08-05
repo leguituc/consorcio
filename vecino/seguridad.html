@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad y Control de Accesos - Habitat+</title>
+    <!-- Referencia a Bootstrap CSS (Azul Clásico) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .guard-card {
+            border: none;
+            border-radius: 12px;
+            transition: transform 0.2s ease;
+        }
+        .guard-card:hover {
+            transform: translateY(-3px);
+        }
+        .badge-shift {
+            font-size: 0.8rem;
+            padding: 0.4em 0.8em;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar Vecino en Azul Clásico de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="../index.html">HABITAT+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="portal.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reclamos.html">Mis Reclamos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="espacios.html">Espacios Comunes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="seguridad.html">Seguridad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="infraestructura.html">Obras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accion_social.html">Acción Social</a></li>
+                    <li class="nav-item dropdown ms-lg-2">
+                        <a class="nav-link dropdown-toggle text-white fw-semibold" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            👤 Juan Pérez
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="perfil.html">👤 Mi Perfil</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="cerrar_sesion.html">🚪 Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container py-5">
+
+        <!-- Encabezado -->
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 pb-3 border-bottom">
+            <div>
+                <h1 class="h3 text-primary fw-bold mb-1">Seguridad y Control de Accesos</h1>
+                <p class="text-muted mb-0">Información del personal de vigilancia, turnos de guardia y registro de visitas.</p>
+            </div>
+            <div class="mt-3 mt-md-0">
+                <div class="alert alert-primary mb-0 py-2 px-3 fw-semibold small d-inline-flex align-items-center">
+                    <span class="fs-5 me-2">📞</span>
+                    <span>Garita Central / Intendencia: <strong>Int. 101</strong> | Urgencias: <strong>0800-555-9111</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1. Personal de Seguridad y Turnos de Guardia -->
+        <h2 class="h5 text-primary fw-bold mb-3">Turnos de Guardia y Personal de Seguridad</h2>
+        <div class="row g-4 mb-5">
+
+            <!-- Turno Mañana -->
+            <div class="col-12 col-md-4">
+                <div class="card guard-card shadow-sm h-100 p-3 bg-white">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-primary badge-shift">Turno Mañana</span>
+                            <span class="text-muted small fw-semibold">06:00 - 14:00 hs</span>
+                        </div>
+                        <h3 class="h6 fw-bold text-dark mb-2">Personal Asignado:</h3>
+                        <ul class="list-unstyled small mb-3">
+                            <li class="mb-1">👮 <strong>Carlos Méndez</strong> (Supervisor)</li>
+                            <li>👮 <strong>Matías Gómez</strong> (Guardia)</li>
+                        </ul>
+                        <hr class="my-2">
+                        <span class="small text-muted d-block"><strong>Cobertura:</strong> Control vehicular principal y acceso peatonal de proveedores.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Turno Tarde -->
+            <div class="col-12 col-md-4">
+                <div class="card guard-card shadow-sm h-100 p-3 bg-white">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-info text-dark badge-shift">Turno Tarde</span>
+                            <span class="text-muted small fw-semibold">14:00 - 22:00 hs</span>
+                        </div>
+                        <h3 class="h6 fw-bold text-dark mb-2">Personal Asignado:</h3>
+                        <ul class="list-unstyled small mb-3">
+                            <li class="mb-1">👮 <strong>Esteban Rossi</strong> (Guardia)</li>
+                            <li>👮 <strong>Gabriel Peralta</strong> (Guardia)</li>
+                        </ul>
+                        <hr class="my-2">
+                        <span class="small text-muted d-block"><strong>Cobertura:</strong> Control de visitas, recepción de encomiendas y rondas internas.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Turno Noche -->
+            <div class="col-12 col-md-4">
+                <div class="card guard-card shadow-sm h-100 p-3 bg-white">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="badge bg-dark badge-shift">Turno Noche</span>
+                            <span class="text-muted small fw-semibold">22:00 - 06:00 hs</span>
+                        </div>
+                        <h3 class="h6 fw-bold text-dark mb-2">Personal Asignado:</h3>
+                        <ul class="list-unstyled small mb-3">
+                            <li class="mb-1">👮 <strong>Jorge Ramírez</strong> (Supervisor Noche)</li>
+                            <li>👮 <strong>Lucas Cabrera</strong> (Guardia)</li>
+                        </ul>
+                        <hr class="my-2">
+                        <span class="small text-muted d-block"><strong>Cobertura:</strong> Vigilancia 24hs, monitoreo CCTV y rondas perimetrales nocturnas.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 2. Horarios y Normativas de Acceso -->
+        <div class="card shadow-sm border-0 mb-5">
+            <div class="card-header bg-white py-3">
+                <h2 class="h5 fw-bold mb-0 text-primary">Horarios de Atención y Protocolos de Ingreso</h2>
+            </div>
+            <div class="card-body p-4">
+                <div class="row g-4">
+                    <div class="col-12 col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="fs-3 me-3 text-primary">🚪</div>
+                            <div>
+                                <h3 class="h6 fw-bold mb-1">Acceso Peatonal de Residentes</h3>
+                                <p class="small text-muted mb-0">Habilitado 24 horas mediante tarjeta magnética, código QR o reconocimiento biométrico.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="fs-3 me-3 text-primary">🚘</div>
+                            <div>
+                                <h3 class="h6 fw-bold mb-1">Acceso Vehicular Residentes</h3>
+                                <p class="small text-muted mb-0">Portón automatizado con lector de patente y control remoto de garaje las 24hs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="fs-3 me-3 text-primary">🚚</div>
+                            <div>
+                                <h3 class="h6 fw-bold mb-1">Proveedores, Mudanzas y Obras</h3>
+                                <p class="small text-muted mb-0">Lunes a Viernes de 08:00 a 18:00 hs. Sábados de 08:00 a 13:00 hs (con autorización previa).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="d-flex align-items-start">
+                            <div class="fs-3 me-3 text-primary">📦</div>
+                            <div>
+                                <h3 class="h6 fw-bold mb-1">Recepción de Paquetería y Envíos</h3>
+                                <p class="small text-muted mb-0">Lunes a Domingos de 07:00 a 22:00 hs en Garita Central. Se notifica al residente por app.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Registro de Accesos Simulados -->
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                <div>
+                    <h2 class="h5 fw-bold mb-0 text-primary">Registro Reciente de Accesos (Simulado)</h2>
+                    <p class="text-muted small mb-0">Últimos ingresos y egresos registrados para tu unidad (Piso 4 - Depto B).</p>
+                </div>
+                <span class="badge bg-light text-dark border">Historial en Vivo</span>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-primary">
+                            <tr>
+                                <th scope="col" class="py-3 ps-4">Fecha y Hora</th>
+                                <th scope="col" class="py-3">Tipo de Ingreso</th>
+                                <th scope="col" class="py-3">Nombre / Identificación</th>
+                                <th scope="col" class="py-3">Unidad Destino</th>
+                                <th scope="col" class="py-3 text-center pe-4">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Registro 1 -->
+                            <tr>
+                                <td class="ps-4 fw-bold">04/08/2026 18:45 hs</td>
+                                <td><span class="badge bg-outline-primary text-primary border">Visita Peatonal</span></td>
+                                <td>Marcelo Fernández (DNI 35.123.987)</td>
+                                <td>Piso 4 - Depto B</td>
+                                <td class="text-center pe-4"><span class="badge bg-success px-3 py-2">En Complejo</span></td>
+                            </tr>
+                            <!-- Registro 2 -->
+                            <tr>
+                                <td class="ps-4 fw-bold">04/08/2026 16:20 hs</td>
+                                <td><span class="badge bg-outline-secondary text-secondary border">Delivery / Paquete</span></td>
+                                <td>Repartidor Rappi (Pedido #842)</td>
+                                <td>Piso 4 - Depto B</td>
+                                <td class="text-center pe-4"><span class="badge bg-secondary px-3 py-2">Finalizado</span></td>
+                            </tr>
+                            <!-- Registro 3 -->
+                            <tr>
+                                <td class="ps-4 fw-bold">04/08/2026 11:30 hs</td>
+                                <td><span class="badge bg-outline-warning text-dark border">Proveedor / Service</span></td>
+                                <td>Técnico Cablevisión (Gómez L.)</td>
+                                <td>Piso 4 - Depto B</td>
+                                <td class="text-center pe-4"><span class="badge bg-info text-dark px-3 py-2">Egresó</span></td>
+                            </tr>
+                            <!-- Registro 4 -->
+                            <tr>
+                                <td class="ps-4 fw-bold">03/08/2026 21:10 hs</td>
+                                <td><span class="badge bg-outline-primary text-primary border">Vehicular Visita</span></td>
+                                <td>Ford Focus (Patente AA 345 BB)</td>
+                                <td>Piso 4 - Depto B</td>
+                                <td class="text-center pe-4"><span class="badge bg-info text-dark px-3 py-2">Egresó</span></td>
+                            </tr>
+                            <!-- Registro 5 -->
+                            <tr>
+                                <td class="ps-4 fw-bold">03/08/2026 14:00 hs</td>
+                                <td><span class="badge bg-outline-primary text-primary border">Visita Peatonal</span></td>
+                                <td>Ana María Gómez (DNI 28.900.111)</td>
+                                <td>Piso 4 - Depto B</td>
+                                <td class="text-center pe-4"><span class="badge bg-info text-dark px-3 py-2">Egresó</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

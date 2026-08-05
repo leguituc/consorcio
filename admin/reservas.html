@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Reservas (Administrador) - Habitat+</title>
+    <!-- Referencia a Bootstrap CSS (Azul Clásico) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar Admin en Azul Clásico de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="panel.html">HABITAT+ <span class="badge bg-light text-primary fs-6 align-middle ms-2">ADMIN</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="panel.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reclamos.html">Reclamos</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="reservas.html">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vecinos.html">Vecinos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="metricas.html">Métricas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="estadisticas.html">Estadísticas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../vecino/espacios.html">Vista Vecino</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cerrar_sesion.html">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container py-5">
+
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center border-bottom">
+                <div>
+                    <h1 class="h4 text-primary fw-bold mb-0">Gestión General de Reservas</h1>
+                    <p class="text-muted small mb-0">Panel de administración: Listado completo de solicitudes y turnos de espacios comunes por vecino.</p>
+                </div>
+                <span class="badge bg-primary px-3 py-2 fs-6">Administración</span>
+            </div>
+
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-primary">
+                            <tr>
+                                <th scope="col" class="py-3 ps-4">Espacio</th>
+                                <th scope="col" class="py-3">Vecino / Unidad</th>
+                                <th scope="col" class="py-3">Fecha</th>
+                                <th scope="col" class="py-3">Horario</th>
+                                <th scope="col" class="py-3 text-center pe-4">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Reserva 1 -->
+                            <tr>
+                                <td class="ps-4 fw-bold text-dark">Quincho</td>
+                                <td>Juan Pérez (Piso 4 - Depto B)</td>
+                                <td>05/08/2026</td>
+                                <td>19:00 - 00:00 hs</td>
+                                <td class="text-center pe-4"><span class="badge bg-success px-3 py-2 fs-6">Confirmada</span></td>
+                            </tr>
+                            <!-- Reserva 2 -->
+                            <tr>
+                                <td class="ps-4 fw-bold text-dark">Salón de Usos Múltiples (SUM)</td>
+                                <td>María Rossi (Piso 7 - Depto A)</td>
+                                <td>08/08/2026</td>
+                                <td>18:00 - 01:00 hs</td>
+                                <td class="text-center pe-4"><span class="badge bg-success px-3 py-2 fs-6">Confirmada</span></td>
+                            </tr>
+                            <!-- Reserva 3 -->
+                            <tr>
+                                <td class="ps-4 fw-bold text-dark">Cancha Deportiva</td>
+                                <td>Carlos López (Piso 2 - Depto C)</td>
+                                <td>10/08/2026</td>
+                                <td>18:00 - 19:00 hs</td>
+                                <td class="text-center pe-4"><span class="badge bg-warning text-dark px-3 py-2 fs-6">Pendiente</span></td>
+                            </tr>
+                            <!-- Reserva 4 -->
+                            <tr>
+                                <td class="ps-4 fw-bold text-dark">Piscina</td>
+                                <td>Lucía Torres (Piso 1 - Depto D)</td>
+                                <td>12/08/2026</td>
+                                <td>10:00 - 14:00 hs</td>
+                                <td class="text-center pe-4"><span class="badge bg-success px-3 py-2 fs-6">Confirmada</span></td>
+                            </tr>
+                            <!-- Reserva 5 -->
+                            <tr>
+                                <td class="ps-4 fw-bold text-dark">Quincho</td>
+                                <td>Roberto Fernández (Piso 3 - Depto A)</td>
+                                <td>15/08/2026</td>
+                                <td>11:00 - 16:00 hs</td>
+                                <td class="text-center pe-4"><span class="badge bg-success px-3 py-2 fs-6">Confirmada</span></td>
+                            </tr>
+                            <!-- Reserva 6 -->
+                            <tr>
+                                <td class="ps-4 fw-bold text-dark">Salón de Usos Múltiples (SUM)</td>
+                                <td>Sofía Gómez (Piso 8 - Depto B)</td>
+                                <td>20/08/2026</td>
+                                <td>12:00 - 17:00 hs</td>
+                                <td class="text-center pe-4"><span class="badge bg-warning text-dark px-3 py-2 fs-6">Pendiente</span></td>
+                            </tr>
+                            <!-- Reserva 7 -->
+                            <tr>
+                                <td class="ps-4 fw-bold text-dark">Cancha Deportiva</td>
+                                <td>Alejandro Morales (Piso 6 - Depto C)</td>
+                                <td>22/08/2026</td>
+                                <td>20:00 - 21:00 hs</td>
+                                <td class="text-center pe-4"><span class="badge bg-secondary px-3 py-2 fs-6">Cancelada</span></td>
+                            </tr>
+                            <!-- Reserva 8 -->
+                            <tr>
+                                <td class="ps-4 fw-bold text-dark">Piscina</td>
+                                <td>Elena Benítez (Piso 5 - Depto F)</td>
+                                <td>28/08/2026</td>
+                                <td>15:00 - 19:00 hs</td>
+                                <td class="text-center pe-4"><span class="badge bg-success px-3 py-2 fs-6">Confirmada</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

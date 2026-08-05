@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métricas del Consorcio - Habitat+</title>
+    <!-- Referencia a Bootstrap CSS (Azul Clásico) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .metric-card {
+            border: none;
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .metric-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+        }
+        .icon-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar Admin en Azul Clásico de Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="panel.html">HABITAT+ <span class="badge bg-light text-primary fs-6 align-middle ms-2">ADMIN</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="panel.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reclamos.html">Reclamos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="vecinos.html">Vecinos</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="metricas.html">Métricas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="estadisticas.html">Estadísticas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../vecino/espacios.html">Vista Vecino</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cerrar_sesion.html">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container py-5">
+
+        <!-- Encabezado -->
+        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+            <div>
+                <h1 class="h3 text-primary fw-bold mb-1">Métricas Generales del Consorcio</h1>
+                <p class="text-muted mb-0">Valores actualizados basados en los datos registrados de reclamos, reservas y publicaciones.</p>
+            </div>
+            <span class="badge bg-primary px-3 py-2 fs-6">Actualizado hoy</span>
+        </div>
+
+        <!-- 6 Tarjetas de Métricas basadas en los datos creados -->
+        <div class="row g-4 mb-5">
+
+            <!-- Métricas 1: Total Reclamos -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card metric-card shadow-sm h-100 p-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted small text-uppercase fw-semibold">Reclamos Registrados</span>
+                            <div class="icon-circle bg-warning bg-opacity-10 text-warning">📋</div>
+                        </div>
+                        <h2 class="display-5 fw-bold text-dark mb-2">10</h2>
+                        <div class="small">
+                            <span class="text-success fw-semibold">4 Resueltos</span> • 
+                            <span class="text-info text-dark fw-semibold">3 En Proceso</span> • 
+                            <span class="text-warning text-dark fw-semibold">2 Pendientes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Métricas 2: Total Reservas -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card metric-card shadow-sm h-100 p-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted small text-uppercase fw-semibold">Reservas de Espacios</span>
+                            <div class="icon-circle bg-primary bg-opacity-10 text-primary">📅</div>
+                        </div>
+                        <h2 class="display-5 fw-bold text-primary mb-2">8</h2>
+                        <div class="small">
+                            <span class="text-success fw-semibold">5 Confirmadas</span> • 
+                            <span class="text-warning text-dark fw-semibold">2 Pendientes</span> • 
+                            <span class="text-secondary fw-semibold">1 Cancelada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Métricas 3: Noticias Publicadas -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card metric-card shadow-sm h-100 p-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted small text-uppercase fw-semibold">Noticias Publicadas</span>
+                            <div class="icon-circle bg-success bg-opacity-10 text-success">📰</div>
+                        </div>
+                        <h2 class="display-5 fw-bold text-success mb-2">6</h2>
+                        <span class="text-muted small">Comunicados activos a la comunidad</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Métricas 4: Espacios Comunes -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card metric-card shadow-sm h-100 p-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted small text-uppercase fw-semibold">Espacios Disponibles</span>
+                            <div class="icon-circle bg-info bg-opacity-10 text-info">🏊</div>
+                        </div>
+                        <h2 class="display-5 fw-bold text-info mb-2">4</h2>
+                        <span class="text-muted small">Quincho, SUM, Cancha y Piscina</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Métricas 5: Tasa de Resolución -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card metric-card shadow-sm h-100 p-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted small text-uppercase fw-semibold">Tasa de Resolución</span>
+                            <div class="icon-circle bg-success bg-opacity-10 text-success">📈</div>
+                        </div>
+                        <h2 class="display-5 fw-bold text-success mb-2">70%</h2>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-success" style="width: 70%"></div>
+                        </div>
+                        <span class="small text-muted mt-2 d-block">7 de 10 reclamos resueltos o en proceso</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Métricas 6: Recaudación Estimada -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card metric-card shadow-sm h-100 p-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted small text-uppercase fw-semibold">Expensas del Mes</span>
+                            <div class="icon-circle bg-primary bg-opacity-10 text-primary">💰</div>
+                        </div>
+                        <h2 class="h3 fw-bold text-primary mb-2">$ 4.850.000</h2>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-primary" style="width: 88%"></div>
+                        </div>
+                        <span class="small text-muted mt-2 d-block">88% cobrado sobre el total del consorcio</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Desglose de Datos Ficticios Registrados -->
+        <div class="row g-4">
+            
+            <!-- Resumen por Estado de Reclamos -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-white py-3">
+                        <h2 class="h5 fw-bold mb-0 text-primary">Desglose de Reclamos (10 Totales)</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><span class="badge bg-success me-2">Resuelto</span> Reclamos finalizados</span>
+                                <span class="fw-bold fs-5">4</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><span class="badge bg-info text-dark me-2">En Proceso</span> En tratamiento técnico</span>
+                                <span class="fw-bold fs-5">3</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><span class="badge bg-warning text-dark me-2">Pendiente</span> Pendientes de revisión</span>
+                                <span class="fw-bold fs-5">2</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><span class="badge bg-secondary me-2">Cancelado</span> Cancelados o duplicados</span>
+                                <span class="fw-bold fs-5">1</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumen por Espacio de Reservas -->
+            <div class="col-12 col-lg-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-white py-3">
+                        <h2 class="h5 fw-bold mb-0 text-primary">Desglose de Reservas (8 Totales)</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Quincho (05/08 y 15/08)</span>
+                                <span class="badge bg-primary rounded-pill px-3 fs-6">2 reservas</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Salón de Usos Múltiples - SUM (08/08 y 20/08)</span>
+                                <span class="badge bg-primary rounded-pill px-3 fs-6">2 reservas</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Piscina (12/08 y 28/08)</span>
+                                <span class="badge bg-primary rounded-pill px-3 fs-6">2 reservas</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Cancha Deportiva (10/08 y 22/08)</span>
+                                <span class="badge bg-primary rounded-pill px-3 fs-6">2 reservas</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
