@@ -7,6 +7,7 @@
     <title>Acción Social y Campañas Comunitarias - Habitat+</title>
     <!-- Referencia a Bootstrap CSS (Azul Clásico) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
     <style>
         .campaign-card {
             border: none;
@@ -28,35 +29,42 @@
 <body class="bg-light">
 
     <!-- Navbar Vecino en Azul Clásico de Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-        <div class="container">
-            <a class="navbar-brand fw-bold fs-4" href="../index.html">HABITAT+</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="portal.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="reclamos.html">Mis Reclamos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="espacios.html">Espacios Comunes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="seguridad.html">Seguridad</a></li>
-                    <li class="nav-item"><a class="nav-link" href="infraestructura.html">Obras</a></li>
-                    <li class="nav-item"><a class="nav-link active fw-bold" href="accion_social.html">Acción Social</a></li>
-                    <li class="nav-item dropdown ms-lg-2">
-                        <a class="nav-link dropdown-toggle text-white fw-semibold" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            👤 Juan Pérez
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="perfil.html">👤 Mi Perfil</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-danger" href="cerrar_sesion.html">🚪 Cerrar Sesión</a></li>
-                        </ul>
-                    </li>
-                </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4" href="portal.html">HABITAT+</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="portal.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reclamos.html">Mis Reclamos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="espacios.html">Espacios Comunes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="seguridad.html">Seguridad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="infraestructura.html">Obras</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold" href="accion_social.html">Acción Social</a></li>
+                        <li class="nav-item"><a class="nav-link" href="telefonos.html">Teléfonos Útiles</a></li>
+                        <li class="nav-item dropdown ms-lg-2">
+                            <a class="nav-link dropdown-toggle text-white fw-bold" href="#" id="userDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                👤 Juan Pérez
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="perfil.html">👤 Mi Perfil</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="cerrar_sesion.html">🚪 Cerrar Sesión</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Contenido Principal -->
     <main class="container py-5">
@@ -76,7 +84,7 @@
             <!-- 1. Donaciones -->
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card campaign-card shadow-sm h-100 bg-white">
-                    <img src="../public/images/sum.jpg" class="card-img-top campaign-img" alt="Campaña de Donaciones">
+                    <img src="../assets/img/sum.jpg" class="card-img-top campaign-img" alt="Campaña de Donaciones">
                     <div class="card-body d-flex flex-column p-4">
                         <span class="badge bg-danger bg-opacity-10 text-danger fw-semibold w-auto align-self-start mb-2">❤️ Donaciones</span>
                         <h2 class="h5 fw-bold text-dark mb-2">Colecta Solidaria de Abrigo y Calzado</h2>
@@ -93,7 +101,7 @@
             <!-- 2. Reciclaje -->
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card campaign-card shadow-sm h-100 bg-white">
-                    <img src="../public/images/reciclaje.jpg" class="card-img-top campaign-img" alt="Programa de Reciclaje">
+                    <img src="../assets/img/reciclaje.jpg" class="card-img-top campaign-img" alt="Programa de Reciclaje">
                     <div class="card-body d-flex flex-column p-4">
                         <span class="badge bg-success bg-opacity-10 text-success fw-semibold w-auto align-self-start mb-2">♻️ Reciclaje</span>
                         <h2 class="h5 fw-bold text-dark mb-2">Separación de Residuos en Origen</h2>
@@ -110,7 +118,7 @@
             <!-- 3. Mascotas Perdidas -->
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card campaign-card shadow-sm h-100 bg-white">
-                    <img src="../public/images/quincho.jpg" class="card-img-top campaign-img" alt="Mascotas Perdidas y Encontradas">
+                    <img src="../assets/img/quincho.jpg" class="card-img-top campaign-img" alt="Mascotas Perdidas y Encontradas">
                     <div class="card-body d-flex flex-column p-4">
                         <span class="badge bg-warning bg-opacity-10 text-dark fw-semibold w-auto align-self-start mb-2">🐾 Mascotas</span>
                         <h2 class="h5 fw-bold text-dark mb-2">Red de Búsqueda de Mascotas</h2>
@@ -127,7 +135,7 @@
             <!-- 4. Eventos Solidarios -->
             <div class="col-12 col-md-6 col-lg-3">
                 <div class="card campaign-card shadow-sm h-100 bg-white">
-                    <img src="../public/images/cancha.jpg" class="card-img-top campaign-img" alt="Eventos Solidarios">
+                    <img src="../assets/img/cancha.jpg" class="card-img-top campaign-img" alt="Eventos Solidarios">
                     <div class="card-body d-flex flex-column p-4">
                         <span class="badge bg-info bg-opacity-10 text-primary fw-semibold w-auto align-self-start mb-2">🎉 Eventos</span>
                         <h2 class="h5 fw-bold text-dark mb-2">Kermesse y Torneo Solidario en el SUM</h2>
