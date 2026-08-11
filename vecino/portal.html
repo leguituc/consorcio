@@ -14,10 +14,12 @@
             border-radius: 14px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
+
         .portal-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
         }
+
         .icon-box {
             width: 55px;
             height: 55px;
@@ -35,10 +37,11 @@
 
     <!-- Navbar Vecino en Azul Clásico de Bootstrap -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-verde shadow-sm" data-bs-theme="dark">
             <div class="container">
                 <a class="navbar-brand fw-bold fs-4" href="portal.html">HABITAT+</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -79,10 +82,12 @@
             <div class="col-md-9 position-relative z-1">
                 <span class="badge bg-light text-primary fw-bold mb-2">Portal del Vecino</span>
                 <h1 class="display-5 fw-bold">¡Hola, Juan Pérez!</h1>
-                <p class="fs-5 opacity-90 mb-4">Bienvenido a tu panel personal de <strong>HABITAT+</strong> (Unidad: Piso 4 - Depto B). Accedé a todos los servicios de tu comunidad.</p>
-                
+                <p class="fs-5 opacity-90 mb-4">Bienvenido a tu panel personal de <strong>HABITAT+</strong> (Unidad:
+                    Piso 4 - Depto B). Accedé a todos los servicios de tu comunidad.</p>
+
                 <div class="d-flex flex-wrap gap-2">
-                    <a href="nuevo_reclamo.html" class="btn btn-light fw-semibold text-primary px-4 py-2">+ Nuevo Reclamo</a>
+                    <a href="nuevo_reclamo.html" class="btn btn-light fw-semibold text-primary px-4 py-2">+ Nuevo
+                        Reclamo</a>
                     <a href="espacios.html" class="btn btn-outline-light fw-semibold px-4 py-2">Reservar Espacio</a>
                 </div>
             </div>
@@ -104,8 +109,10 @@
                             <h3 class="h5 fw-bold text-dark mb-0">Mis Expensas</h3>
                             <span class="badge bg-success">Al Día</span>
                         </div>
-                        <p class="text-secondary small mb-4 flex-grow-1">Consultá tu estado de cuenta, historial de pagos y descargá comprobantes oficiales.</p>
-                        <a href="perfil.html" class="btn btn-outline-primary w-100 fw-semibold">Ver Mis Expensas &rarr;</a>
+                        <p class="text-secondary small mb-4 flex-grow-1">Consultá tu estado de cuenta, historial de
+                            pagos y descargá comprobantes oficiales.</p>
+                        <a href="perfil.html" class="btn btn-outline-primary w-100 fw-semibold">Ver Mis Expensas
+                            &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -121,8 +128,10 @@
                             <h3 class="h5 fw-bold text-dark mb-0">Mis Reclamos</h3>
                             <span class="badge bg-info text-dark">3 Activos</span>
                         </div>
-                        <p class="text-secondary small mb-4 flex-grow-1">Iniciá nuevos reclamos de plomería, seguridad o mantenimiento y hace el seguimiento en vivo.</p>
-                        <a href="reclamos.html" class="btn btn-outline-primary w-100 fw-semibold">Ver Mis Reclamos &rarr;</a>
+                        <p class="text-secondary small mb-4 flex-grow-1">Iniciá nuevos reclamos de plomería, seguridad o
+                            mantenimiento y hace el seguimiento en vivo.</p>
+                        <a href="reclamos.html" class="btn btn-outline-primary w-100 fw-semibold">Ver Mis Reclamos
+                            &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -138,8 +147,10 @@
                             <h3 class="h5 fw-bold text-dark mb-0">Reservas</h3>
                             <span class="badge bg-primary">Quincho 05/08</span>
                         </div>
-                        <p class="text-secondary small mb-4 flex-grow-1">Revisá la disponibilidad del Quincho, SUM, Cancha o Piscina y agendá tu turno.</p>
-                        <a href="reservas.html" class="btn btn-outline-primary w-100 fw-semibold">Ver Reservas &rarr;</a>
+                        <p class="text-secondary small mb-4 flex-grow-1">Revisá la disponibilidad del Quincho, SUM,
+                            Cancha o Piscina y agendá tu turno.</p>
+                        <a href="reservas.html" class="btn btn-outline-primary w-100 fw-semibold">Ver Reservas
+                            &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -152,8 +163,10 @@
                             🛡️
                         </div>
                         <h3 class="h5 fw-bold text-dark mb-2">Seguridad</h3>
-                        <p class="text-secondary small mb-4 flex-grow-1">Información de los turnos de guardia, teléfonos de emergencia y registro de visitas.</p>
-                        <a href="seguridad.html" class="btn btn-outline-primary w-100 fw-semibold">Acceder a Seguridad &rarr;</a>
+                        <p class="text-secondary small mb-4 flex-grow-1">Información de los turnos de guardia, teléfonos
+                            de emergencia y registro de visitas.</p>
+                        <a href="seguridad.html" class="btn btn-outline-primary w-100 fw-semibold">Acceder a Seguridad
+                            &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -166,8 +179,10 @@
                             👤
                         </div>
                         <h3 class="h5 fw-bold text-dark mb-2">Mi Perfil</h3>
-                        <p class="text-secondary small mb-4 flex-grow-1">Gestioná tus datos personales, teléfonos de contacto, unidad funcional y adicionales.</p>
-                        <a href="perfil.html" class="btn btn-outline-primary w-100 fw-semibold">Ir a Mi Perfil &rarr;</a>
+                        <p class="text-secondary small mb-4 flex-grow-1">Gestioná tus datos personales, teléfonos de
+                            contacto, unidad funcional y adicionales.</p>
+                        <a href="perfil.html" class="btn btn-outline-primary w-100 fw-semibold">Ir a Mi Perfil
+                            &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -180,8 +195,10 @@
                             🏗️
                         </div>
                         <h3 class="h5 fw-bold text-dark mb-2">Obras e Infraestructura</h3>
-                        <p class="text-secondary small mb-4 flex-grow-1">Seguimiento de proyectos de mejora, instalación de paneles solares y mantenimientos.</p>
-                        <a href="infraestructura.html" class="btn btn-outline-primary w-100 fw-semibold">Ver Obras &rarr;</a>
+                        <p class="text-secondary small mb-4 flex-grow-1">Seguimiento de proyectos de mejora, instalación
+                            de paneles solares y mantenimientos.</p>
+                        <a href="infraestructura.html" class="btn btn-outline-primary w-100 fw-semibold">Ver Obras
+                            &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -194,8 +211,10 @@
                             📜
                         </div>
                         <h3 class="h5 fw-bold text-dark mb-2">Normas y Reglamento</h3>
-                        <p class="text-secondary small mb-4 flex-grow-1">Consultá el reglamento interno de convivencia, mascotas, ruidos y uso de amenities.</p>
-                        <a href="reglamento.html" class="btn btn-outline-primary w-100 fw-semibold">Ver Reglamento &rarr;</a>
+                        <p class="text-secondary small mb-4 flex-grow-1">Consultá el reglamento interno de convivencia,
+                            mascotas, ruidos y uso de amenities.</p>
+                        <a href="reglamento.html" class="btn btn-outline-primary w-100 fw-semibold">Ver Reglamento
+                            &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -213,7 +232,8 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <h5 class="fw-bold text-primary mb-3">HABITAT+</h5>
                     <p class="small text-white-50 mb-3">
-                        Plataforma integral para la gestión de consorcios, comunicación entre vecinos, control de expensas, reservas de espacios comunes y seguridad.
+                        Plataforma integral para la gestión de consorcios, comunicación entre vecinos, control de
+                        expensas, reservas de espacios comunes y seguridad.
                     </p>
                     <span class="badge bg-secondary">Torre Libertador - Consorcio N° 4082</span>
                 </div>
@@ -262,7 +282,8 @@
 
             <div class="row align-items-center">
                 <div class="col-12 text-center text-white-50 small">
-                    <p class="mb-0">HABITAT+ &copy; 2026. Todos los derechos reservados. Gestión Integral de Consorcios.</p>
+                    <p class="mb-0">HABITAT+ &copy; 2026. Todos los derechos reservados. Gestión Integral de Consorcios.
+                    </p>
                 </div>
             </div>
         </div>

@@ -58,21 +58,23 @@ h2 {
     font-weight: normal !important;
 }
 
-/* Navbar Oscura / Azul (Vecino y Admin) */
+/* Navbar Oscura / Verde (Vecino y Admin) */
 .navbar-dark .navbar-nav .nav-link {
-    color: #cce5ff !important; /* Celeste muy claro */
+    color: #e2f7ed !important;
+    /* Blanco/Verde muy claro */
     font-weight: normal !important;
     transition: color 0.2s ease-in-out;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
-    color: #99c2ff !important; /* Celeste un poquito más oscuro */
+    color: #ffffff !important;
     font-weight: normal !important;
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #ffc107 !important; /* Amarillo para la opción activa */
+    color: #ffc107 !important;
+    /* Amarillo para la opción activa */
     font-weight: normal !important;
 }
 
@@ -419,14 +421,14 @@ h2 {
 .boton-ingresar {
     width: 100%;
     height: 50px;
-    background-color: #0d6efd;
+    background-color: #0b5c38;
     color: #ffffff;
-    border: 1px solid #0d6efd;
+    border: 1px solid #0b5c38;
     border-radius: 7px;
 }
 
 .boton-ingresar:hover {
-    background-color: #0b5ed7;
+    background-color: #08472c;
     color: #ffffff;
 }
 
@@ -487,4 +489,430 @@ h2 {
     color: #ffffff;
     font-size: 12px;
     text-decoration: none;
+}
+
+/* ==================================================
+   INDEX - HABITAT+
+   Clases personalizadas: inicio-
+================================================== */
+
+
+/* HERO */
+
+.inicio-hero {
+    background-color: #ffffff;
+}
+
+.inicio-titulo-principal {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #171a18;
+}
+
+.inicio-texto-verde {
+    color: #08633d;
+}
+
+.inicio-texto-hero {
+    max-width: 570px;
+    color: #5f6e66;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.inicio-imagen-principal {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+
+/* ETIQUETAS */
+
+.inicio-etiqueta {
+    display: inline-block;
+    padding: 7px 13px;
+    background-color: #e7f2ec;
+    color: #08633d;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+
+/* BOTONES */
+
+.inicio-boton-principal {
+    background-color: #08633d;
+    border: 1px solid #08633d;
+    color: #ffffff;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+.inicio-boton-principal:hover {
+    background-color: #064c30;
+    border-color: #064c30;
+    color: #ffffff;
+}
+
+
+.inicio-boton-secundario {
+    background-color: #ffffff;
+    border: 1px solid #08633d;
+    color: #08633d;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+.inicio-boton-secundario:hover {
+    background-color: #08633d;
+    color: #ffffff;
+}
+
+
+/* ENCABEZADOS */
+
+.inicio-encabezado-seccion p {
+    color: #718078;
+    margin-bottom: 0;
+}
+
+.inicio-titulo-seccion {
+    color: #171a18;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* SLIDER */
+
+.inicio-slider {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.inicio-imagen-slider {
+    height: 430px;
+    object-fit: cover;
+    filter: brightness(55%);
+}
+
+.inicio-texto-slider {
+    left: 7%;
+    right: 38%;
+    bottom: 40px;
+    text-align: left;
+}
+
+.inicio-texto-slider h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.inicio-texto-slider p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.inicio-etiqueta-slider {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: #08633d;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* AVISO */
+
+.inicio-aviso {
+    background-color: #08633d;
+    color: #ffffff;
+    border-radius: 16px;
+}
+
+.inicio-aviso h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.inicio-aviso-etiqueta {
+    color: #bce2ce;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.inicio-boton-aviso {
+    background-color: #ffffff;
+    color: #08633d;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+.inicio-boton-aviso:hover {
+    background-color: #e6f1eb;
+    color: #08633d;
+}
+
+
+/* FONDO DE SECCIONES */
+
+.inicio-fondo-claro {
+    background-color: #f5f8f6;
+}
+
+
+/* ACCESOS RÁPIDOS */
+
+.inicio-tarjeta-acceso {
+    background-color: #ffffff;
+    border: 1px solid #e2e8e4;
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inicio-tarjeta-acceso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.inicio-tarjeta-acceso h3 {
+    color: #1b211e;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.inicio-tarjeta-acceso p {
+    color: #69766f;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.inicio-numero-acceso {
+    display: inline-block;
+    padding: 10px 13px;
+    background-color: #e7f2ec;
+    color: #08633d;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.inicio-enlace {
+    color: #08633d;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.inicio-enlace:hover {
+    color: #064c30;
+    text-decoration: underline;
+}
+
+
+/* NOTICIAS */
+
+.inicio-tarjeta-noticia {
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #e2e7e4;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inicio-tarjeta-noticia:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.07);
+}
+
+.inicio-imagen-noticia {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.inicio-tarjeta-noticia h3 {
+    color: #1b211e;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.inicio-tarjeta-noticia p {
+    color: #69766f;
+    line-height: 1.6;
+}
+
+.inicio-categoria {
+    color: #08633d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* EVENTOS */
+
+.inicio-evento {
+    background-color: #ffffff;
+    border: 1px solid #e1e7e3;
+    border-radius: 14px;
+    transition: transform 0.3s ease;
+}
+
+.inicio-evento:hover {
+    transform: translateY(-4px);
+}
+
+.inicio-evento h3 {
+    color: #1b211e;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.inicio-evento p {
+    color: #69766f;
+    margin-bottom: 0;
+}
+
+
+.inicio-fecha-evento {
+    width: 55px;
+    height: 55px;
+    padding-top: 4px;
+    background-color: #e7f2ec;
+    color: #08633d;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.inicio-fecha-evento span {
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.inicio-fecha-evento small {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* BANNER */
+
+.inicio-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.inicio-imagen-banner {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(48%);
+}
+
+.inicio-contenido-banner {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    max-width: 520px;
+    color: #ffffff;
+    transform: translateY(-50%);
+}
+
+.inicio-contenido-banner span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.inicio-contenido-banner h2 {
+    margin-top: 10px;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.inicio-contenido-banner p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+
+/* INSTITUCIONAL */
+
+.inicio-imagen-institucional {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.inicio-texto-institucional {
+    color: #65736c;
+    line-height: 1.7;
+}
+
+
+/* RESPONSIVE DEL INDEX */
+
+@media (max-width: 991px) {
+
+    .nav-link {
+        margin-left: 0;
+    }
+
+    .inicio-titulo-principal {
+        font-size: 40px;
+    }
+
+    .inicio-imagen-principal {
+        height: 350px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .inicio-titulo-principal {
+        font-size: 34px;
+    }
+
+    .inicio-titulo-seccion {
+        font-size: 27px;
+    }
+
+    .inicio-imagen-principal {
+        height: 290px;
+    }
+
+    .inicio-imagen-slider {
+        height: 330px;
+    }
+
+    .inicio-texto-slider {
+        left: 8%;
+        right: 8%;
+        bottom: 20px;
+    }
+
+    .inicio-texto-slider h2 {
+        font-size: 23px;
+    }
+
+    .inicio-texto-slider p {
+        font-size: 14px;
+    }
+
+    .inicio-imagen-institucional {
+        height: 280px;
+    }
 }
