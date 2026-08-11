@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil de Vecino - Habitat+</title>
+    <!-- Referencia a Bootstrap CSS (Azul Clásico) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <style>
+        .profile-header-card {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+            border: none;
+            border-radius: 16px;
+        }
+
+        .avatar-circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            color: #0d6efd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-card {
+            border: none;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar Vecino en Azul Clásico de Bootstrap -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-verde shadow-sm" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4" href="portal.html">HABITAT+</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="portal.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reclamos.html">Mis Reclamos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="espacios.html">Espacios Comunes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="seguridad.html">Seguridad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="infraestructura.html">Obras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="accion_social.html">Acción Social</a></li>
+                        <li class="nav-item"><a class="nav-link" href="telefonos.html">Teléfonos Útiles</a></li>
+                        <li class="nav-item dropdown ms-lg-2">
+                            <a class="nav-link dropdown-toggle text-white fw-bold active" href="#" id="userDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                👤 Juan Pérez
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item active" href="perfil.html">👤 Mi Perfil</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="cerrar_sesion.html">🚪 Cerrar Sesión</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container py-5">
+
+        <!-- Banner de Perfil del Vecino -->
+        <div class="card profile-header-card text-white shadow-sm p-4 p-md-5 mb-4">
+            <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+                <div class="avatar-circle">
+                    JP
+                </div>
+                <div class="text-center text-md-start flex-grow-1">
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-1">
+                        <h1 class="h2 fw-bold mb-0">Juan Pérez</h1>
+                        <span class="badge bg-light text-primary fw-bold px-3 py-2">Propietario</span>
+                    </div>
+                    <p class="mb-1 opacity-90 fs-5">Unidad: <strong>Piso 4 - Depto B</strong></p>
+                    <span class="small opacity-75">Residente registrado desde Marzo 2022</span>
+                </div>
+                <div class="text-center text-md-end mt-2 mt-md-0">
+                    <span class="badge bg-success fs-6 px-3 py-2 mb-2 d-inline-block">Expensas Al Día</span>
+                    <br>
+                    <a href="nuevo_reclamo.html" class="btn btn-light fw-semibold text-primary btn-sm px-3">
+                        + Nuevo Reclamo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Columna Izquierda: Información Personal, Unidad Funcional y Datos de Contacto -->
+            <div class="col-12 col-lg-6">
+
+                <!-- 1. Información Personal -->
+                <div class="card profile-card shadow-sm mb-4">
+                    <div
+                        class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                        <h2 class="h5 fw-bold mb-0 text-primary">Información Personal</h2>
+                        <span class="badge bg-light text-dark border">Datos Validados</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted small d-block">Nombre y Apellido</span>
+                                <strong class="text-dark">Juan Pérez</strong>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted small d-block">Documento (DNI)</span>
+                                <strong class="text-dark">38.450.123</strong>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted small d-block">Condición del Residente</span>
+                                <strong class="text-dark">Propietario Ocupante</strong>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted small d-block">Fecha de Registro</span>
+                                <strong class="text-dark">15/03/2022</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Unidad Funcional -->
+                <div class="card profile-card shadow-sm mb-4">
+                    <div class="card-header bg-white py-3 border-bottom">
+                        <h2 class="h5 fw-bold mb-0 text-primary">Unidad Funcional y Adicionales</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted small d-block">Departamento / Piso</span>
+                                <strong class="text-dark">Piso 4 - Depto B</strong>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted small d-block">Cochera Asignada</span>
+                                <strong class="text-dark">N° 14 (Subsuelo 1)</strong>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted small d-block">Baulera</span>
+                                <strong class="text-dark">Baulera B-04</strong>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted small d-block">Porcentaje de Copropiedad</span>
+                                <strong class="text-dark">2.15 %</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Datos de Contacto -->
+                <div class="card profile-card shadow-sm">
+                    <div
+                        class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                        <h2 class="h5 fw-bold mb-0 text-primary">Datos de Contacto</h2>
+                        <button type="button" class="btn btn-outline-primary btn-sm fw-semibold" data-bs-toggle="modal"
+                            data-bs-target="#modalContacto">
+                            Editar Contacto
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <span class="text-muted small d-block">Correo Electrónico</span>
+                                <strong class="text-dark">juan.perez@email.com</strong>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted small d-block">Teléfono Principal</span>
+                                <strong class="text-dark">+54 11 4589-2310</strong>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted small d-block">Teléfono de Emergencia</span>
+                                <strong class="text-dark">+54 11 9876-5432</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Columna Derecha: Estado de Expensas, Próximas Reservas y Reclamos Realizados -->
+            <div class="col-12 col-lg-6">
+
+                <!-- 4. Estado de las Expensas -->
+                <div class="card profile-card shadow-sm mb-4">
+                    <div
+                        class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                        <h2 class="h5 fw-bold mb-0 text-primary">Estado de Expensas</h2>
+                        <span class="badge bg-success px-3 py-2 fs-6">Al Día</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row align-items-center g-3">
+                            <div class="col-12 col-sm-6">
+                                <span class="text-muted small d-block">Último Pago Registrado</span>
+                                <h3 class="h4 fw-bold text-success mb-0">$ 42.500</h3>
+                                <span class="small text-muted">Acreditado el 02/08/2026</span>
+                            </div>
+                            <div class="col-12 col-sm-6 text-sm-end">
+                                <span class="text-muted small d-block mb-1">Próximo Vencimiento</span>
+                                <strong class="text-dark d-block mb-2">10/09/2026</strong>
+                                <a href="404.html" class="btn btn-primary btn-sm fw-semibold">Descargar Comprobante
+                                    PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Próximas Reservas -->
+                <div class="card profile-card shadow-sm mb-4">
+                    <div
+                        class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                        <h2 class="h5 fw-bold mb-0 text-primary">Próximas Reservas</h2>
+                        <a href="espacios.html" class="btn btn-outline-primary btn-sm fw-semibold">+ Reservar</a>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr class="small">
+                                        <th scope="col" class="ps-3">Espacio</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Horario</th>
+                                        <th scope="col" class="text-center pe-3">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="small">
+                                    <tr>
+                                        <td class="ps-3 fw-bold">Quincho</td>
+                                        <td>05/08/2026</td>
+                                        <td>19:00 - 00:00 hs</td>
+                                        <td class="text-center pe-3"><span class="badge bg-success">Confirmada</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold">Quincho</td>
+                                        <td>15/08/2026</td>
+                                        <td>11:00 - 16:00 hs</td>
+                                        <td class="text-center pe-3"><span class="badge bg-success">Confirmada</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Reclamos Realizados -->
+                <div class="card profile-card shadow-sm">
+                    <div
+                        class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                        <h2 class="h5 fw-bold mb-0 text-primary">Reclamos Realizados</h2>
+                        <a href="reclamos.html" class="btn btn-outline-primary btn-sm fw-semibold">Ver Todos</a>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr class="small">
+                                        <th scope="col" class="ps-3">Nº Reclamo</th>
+                                        <th scope="col">Categoría</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col" class="text-center pe-3">Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="small">
+                                    <tr>
+                                        <td class="ps-3 fw-bold text-primary">#REC-001</td>
+                                        <td>Plomería</td>
+                                        <td>04/08/2026</td>
+                                        <td class="text-center pe-3"><span class="badge bg-info text-dark">En
+                                                Proceso</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold text-primary">#REC-004</td>
+                                        <td>Seguridad</td>
+                                        <td>01/08/2026</td>
+                                        <td class="text-center pe-3"><span class="badge bg-info text-dark">En
+                                                Proceso</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-3 fw-bold text-primary">#REC-008</td>
+                                        <td>Mantenimiento</td>
+                                        <td>22/07/2026</td>
+                                        <td class="text-center pe-3"><span class="badge bg-success">Resuelto</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Modal Editar Contacto -->
+    <div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="modalContactoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="modalContactoLabel">Actualizar Datos de Contacto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form action="404.html" method="GET">
+                        <div class="mb-3">
+                            <label for="correoContacto" class="form-label small fw-semibold">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correoContacto" value="juan.perez@email.com"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefonoContacto" class="form-label small fw-semibold">Teléfono
+                                Principal</label>
+                            <input type="tel" class="form-control" id="telefonoContacto" value="+54 11 4589-2310"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emergenciaContacto" class="form-label small fw-semibold">Teléfono de
+                                Emergencia</label>
+                            <input type="tel" class="form-control" id="emergenciaContacto" value="+54 11 9876-5432"
+                                required>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary fw-semibold">Guardar Cambios</button>
+                            <button type="button" class="btn btn-outline-secondary"
+                                data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

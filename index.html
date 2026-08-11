@@ -1,11 +1,402 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consorcio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Habitat+</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
+
 <body>
-    <div>Consorcio</div>
+
+  <header class="encabezado">
+    <section class="container">
+      <nav class="navbar navbar-expand-lg py-3">
+        <a class="navbar-brand logo me-auto me-lg-0" href="index.html">HABITAT+</a>
+        <span class="d-none d-md-inline text-muted ms-3 me-auto">Tu comunidad más conectada</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+          aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center mt-3 mt-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="public/noticias.html">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="public/nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="public/contacto.html">Contacto</a></li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="btn boton-verde text-white"
+                href="public/seleccionar_login.html">Iniciar sesión</a></li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+  </header>
+
+
+  <main>
+    <section class="container py-5">
+      <section class="row align-items-center">
+        <article class="col-6">
+          <p class="bienvenida">BIENVENIDOS A HABITAT+</p>
+          <h1>Todo lo que necesitás para tu comunidad,
+            <span>en un solo lugar</span>
+          </h1>
+          <p class="descripcion mt-4">
+            HABITAT+ es la plataforma que conecta a vecinos y administradores para gestionar expensas, reclamos,
+            reservas, seguridad e información importante de forma simple y segura.
+          </p>
+
+        </article>
+
+
+        <figure class="col-6 mb-0">
+          <img src="assets/img/edificio_index.png" alt="Edificio" class="img-fluid imagen-principal" width="650"
+            height="400">
+        </figure>
+      </section>
+    </section>
+
+    <!-- SLIDER -->
+    <section class="container py-5">
+      <section id="sliderNovedades" class="carousel slide inicio-slider" data-bs-ride="carousel">
+        <section class="carousel-indicators">
+          <button type="button" data-bs-target="#sliderNovedades" data-bs-slide-to="0" class="active"></button>
+
+          <button type="button" data-bs-target="#sliderNovedades" data-bs-slide-to="1"></button>
+
+          <button type="button" data-bs-target="#sliderNovedades" data-bs-slide-to="2"></button>
+        </section>
+
+        <section class="carousel-inner">
+          <article class="carousel-item active">
+            <img src="assets/img/espacio.png" class="d-block w-100 inicio-imagen-slider"
+              alt="Mantenimiento del edificio" />
+
+            <section class="carousel-caption inicio-texto-slider">
+              <span class="inicio-etiqueta-slider"> IMPORTANTE </span>
+
+              <h2>Mantenimiento de espacios comunes</h2>
+
+              <p>
+                Esta semana comenzarán las tareas de mantenimiento y
+                renovación de diferentes sectores.
+              </p>
+            </section>
+          </article>
+
+          <article class="carousel-item">
+            <img src="assets/img/salon.png" class="d-block w-100 inicio-imagen-slider" alt="Salón de usos múltiples" />
+
+            <section class="carousel-caption inicio-texto-slider">
+              <span class="inicio-etiqueta-slider"> NOVEDAD </span>
+
+              <h2>Nuevos horarios para el SUM</h2>
+
+              <p>
+                Ya podés consultar los nuevos horarios disponibles para
+                realizar tus reservas.
+              </p>
+            </section>
+          </article>
+
+          <article class="carousel-item">
+            <img src="assets/img/reunion.png" class="d-block w-100 inicio-imagen-slider" alt="Reunión de vecinos" />
+
+            <section class="carousel-caption inicio-texto-slider">
+              <span class="inicio-etiqueta-slider"> COMUNIDAD </span>
+
+              <h2>Próxima reunión de vecinos</h2>
+
+              <p>Participá de la próxima reunión general del consorcio.</p>
+            </section>
+          </article>
+        </section>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#sliderNovedades" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#sliderNovedades" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </section>
+    </section>
+
+    <!-- NOTICIAS DESTACADAS -->
+    <section class="container py-5">
+      <section class="row align-items-end mb-4">
+        <article class="col-8">
+          <span class="inicio-etiqueta"> ACTUALIDAD </span>
+
+          <h2 class="inicio-titulo-seccion mt-2">Noticias destacadas</h2>
+        </article>
+
+        <article class="col-4 text-end">
+          <a href="public/noticias.html" class="inicio-enlace d-none d-md-inline">
+            Ver todas →
+          </a>
+        </article>
+      </section>
+
+      <section class="row g-4">
+        <article class="col-12 col-md-4">
+          <section class="inicio-tarjeta-noticia h-100">
+            <img src="assets/img/cocheras.jpg" alt="Mantenimiento y Limpieza de Cocheras"
+              class="img-fluid inicio-imagen-noticia" />
+
+            <section class="p-4">
+              <span class="inicio-categoria"> COMUNIDAD </span>
+
+              <h3 class="mt-2">Mantenimiento de Cocheras</h3>
+
+              <p>
+                Comenzaron las mejoras de diferentes sectores compartidos del
+                edificio.
+              </p>
+
+              <a href="public/noticias.html" class="inicio-enlace">
+                Leer más →
+              </a>
+            </section>
+          </section>
+        </article>
+
+        <article class="col-12 col-md-4">
+          <section class="inicio-tarjeta-noticia h-100">
+            <img src="assets/img/control-acceso.jpg" alt="Espacio de reserva del edificio"
+              class="img-fluid inicio-imagen-noticia" />
+
+            <section class="p-4">
+              <span class="inicio-categoria"> SEGURIDAD </span>
+
+              <h3 class="mt-2">Nuevo Control de Acceso Digital</h3>
+
+              <p>
+                Se incorporaron mejoras para reforzar los accesos y la
+                seguridad del edificio.
+              </p>
+
+              <a href="public/noticias.html" class="inicio-enlace">
+                Leer más →
+              </a>
+            </section>
+          </section>
+        </article>
+
+        <article class="col-12 col-md-4">
+          <section class="inicio-tarjeta-noticia h-100">
+            <img src="assets/img/reciclaje.jpg" alt="Programa de Reciclaje Comunitaria"
+              class="img-fluid inicio-imagen-noticia" />
+
+            <section class="p-4">
+              <span class="inicio-categoria"> COMUNIDAD </span>
+
+              <h3 class="mt-2">Programa de Reciclaje Comunitaria</h3>
+
+              <p>
+                Reciclaje y sostenibilidad en el edificio, promoviendo la
+                conciencia ambiental.
+              </p>
+
+              <a href="public/noticias.html" class="inicio-enlace">
+                Leer más →
+              </a>
+            </section>
+          </section>
+        </article>
+      </section>
+    </section>
+
+    <!-- EVENTOS -->
+    <section class="inicio-fondo-claro py-5">
+      <section class="container">
+        <section class="inicio-encabezado-seccion text-center mb-5">
+          <span class="inicio-etiqueta"> AGENDA </span>
+
+          <h2 class="inicio-titulo-seccion mt-2">Próximos eventos</h2>
+        </section>
+
+        <section class="row g-4">
+          <article class="col-12 col-md-4">
+            <section class="inicio-evento h-100 p-3 d-flex align-items-center gap-3">
+              <section class="inicio-fecha-evento flex-shrink-0">
+                <span>15</span>
+                <small>AGO</small>
+              </section>
+
+              <section>
+                <h3 class="mb-1">Reunión de consorcio</h3>
+
+                <p class="mb-0">19:00 hs · Salón de Usos Múltiples</p>
+              </section>
+            </section>
+          </article>
+
+          <article class="col-12 col-md-4">
+            <section class="inicio-evento h-100 p-3 d-flex align-items-center gap-3">
+              <section class="inicio-fecha-evento flex-shrink-0">
+                <span>20</span>
+                <small>AGO</small>
+              </section>
+
+              <section>
+                <h3 class="mb-1">Jornada de mantenimiento</h3>
+
+                <p class="mb-0">09:00 hs · Espacios comunes</p>
+              </section>
+            </section>
+          </article>
+
+          <article class="col-12 col-md-4">
+            <section class="inicio-evento h-100 p-3 d-flex align-items-center gap-3">
+              <section class="inicio-fecha-evento flex-shrink-0">
+                <span>30</span>
+                <small>AGO</small>
+              </section>
+
+              <section>
+                <h3 class="mb-1">Encuentro de vecinos</h3>
+
+                <p class="mb-0">18:00 hs · Salón de Usos Múltiples</p>
+              </section>
+            </section>
+          </article>
+        </section>
+      </section>
+    </section>
+
+    <section class="container pb-5">
+      <h2 class="text-center mb-4">¿Qué podés hacer?</h2>
+
+      <section class="row">
+        <article class="col tarjeta">
+          <h3>Expensas</h3>
+          <p>Consultá y pagá tus expensas de manera rápida y segura.</p>
+        </article>
+
+        <article class="col tarjeta">
+          <h3>Reclamos</h3>
+          <p>Reportá incidentes y hacé seguimiento de sus estados.</p>
+        </article>
+
+        <article class="col tarjeta">
+          <h3>Reservas</h3>
+          <p>Reservá espacios y amenities comunes de tu comunidad.</p>
+        </article>
+
+        <article class="col tarjeta">
+          <h3>Seguridad</h3>
+          <p>Accedé a información y avisos importantes.</p>
+        </article>
+
+        <article class="col tarjeta text-decoration-none text-dark d-block">
+          <h3>Noticias</h3>
+          <p>Enterate de las últimas novedades y comunicados.</p>
+        </article>
+      </section>
+    </section>
+
+
+    <section class="perfiles py-4">
+      <section class="container">
+        <h2 class="text-center">Ingresá según tu perfil</h2>
+
+        <section class="row mt-4 g-4">
+
+          <article class="col-md-6">
+            <section class="tarjeta-perfil h-100 p-4">
+              <h3>Vecino</h3>
+              <p>Accedé a tu espacio para gestionar pagos, reclamos y reservas.</p>
+              <a href="vecino/login.html" class="btn boton-verde text-white fw-semibold mt-3">Ingresar como Vecino
+                &rarr;</a>
+            </section>
+          </article>
+
+          <article class="col-md-6">
+            <section class="tarjeta-perfil h-100 p-4">
+              <h3>Administrador</h3>
+              <p>Administrá usuarios, finanzas, comunicaciones y seguridad.</p>
+              <a href="admin/login.html" class="btn boton-verde text-white fw-semibold mt-3">Ingresar como Administrador
+                &rarr;</a>
+            </section>
+          </article>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <!-- Pie de Página (Footer) con 3 Columnas Responsivas -->
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Columna 1: Información del Consorcio (1 col en sm, 2 en md, 3 en lg) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="fw-bold text-primary mb-3">HABITAT+</h5>
+          <p class="small text-white-50 mb-3">
+            Plataforma integral para la gestión de consorcios, comunicación entre vecinos, control de expensas, reservas
+            de espacios comunes y seguridad.
+          </p>
+          <span class="badge bg-secondary">Torre Libertador - Consorcio N° 4082</span>
+        </div>
+
+        <!-- Columna 2: Redes Sociales (1 col en sm, 2 en md, 3 en lg) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="fw-bold text-white mb-3">Redes Sociales</h5>
+          <ul class="list-unstyled small mb-0">
+            <li class="mb-2">
+              <a href="#" class="text-white-50 text-decoration-none d-inline-flex align-items-center">
+                🌐 <span class="ms-2">www.consorciohabitat.com.ar</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-white-50 text-decoration-none d-inline-flex align-items-center">
+                📷 <span class="ms-2">Instagram: @habitat.consorcios</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-white-50 text-decoration-none d-inline-flex align-items-center">
+                📘 <span class="ms-2">Facebook: Consorcio Habitat Plus</span>
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="#" class="text-white-50 text-decoration-none d-inline-flex align-items-center">
+                💼 <span class="ms-2">LinkedIn: Habitat+ Oficial</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Información de Contacto (1 col en sm, 2 en md, 3 en lg) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5 class="fw-bold text-white mb-3">Información de Contacto</h5>
+          <ul class="list-unstyled small text-white-50 mb-0">
+            <li class="mb-2">📍 <strong>Dirección:</strong> Av. del Libertador 4500, CABA</li>
+            <li class="mb-2">📞 <strong>Administración:</strong> +54 11 4890-1234</li>
+            <li class="mb-2">✉️ <strong>Correo:</strong> contacto@consorciohabitat.com.ar</li>
+            <li class="mb-2">🚨 <strong>Guardia 24 hs:</strong> +54 11 9110-0000</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="my-4 border-secondary opacity-25">
+
+      <div class="row align-items-center">
+        <div class="col-12 text-center text-white-50 small">
+          <p class="mb-0">HABITAT+ &copy; 2026. Todos los derechos reservados. Gestión Integral de Consorcios.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

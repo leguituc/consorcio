@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Vecino - Habitat+</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+</head>
+
+<body>
+
+    <main class="login">
+        <section class="row">
+            <section class="col-5 lado-izquierdo">
+                <a class="logo-login" href="../index.html">HABITAT+</a>
+                <section class="texto-bienvenida">
+                    <h1>Bienvenido
+                        <br>
+                        Vecino
+                    </h1>
+
+                    <p>
+                        Ingresá a tu cuenta de residente para acceder a toda la información de tu comunidad.</p>
+                </section>
+
+                <section class="seguridad">
+                    <h2>Tu seguridad
+                        <br>
+                        es nuestra prioridad
+                    </h2>
+
+                    <p>Todos tus datos están protegidos con los más altos estándares de seguridad.</p>
+                </section>
+            </section>
+
+
+            <section class="col-7 lado-derecho">
+                <form class="formulario-login" action="portal.html" method="GET">
+                    <span class="badge bg-verde text-white px-3 py-2 fs-6 rounded-pill mb-3">🏘️ Acceso Vecino</span>
+                    <h2>Iniciar sesión como Vecino</h2>
+                    <p class="subtitulo-login">Accedé a tu cuenta para continuar</p>
+
+                    <label for="usuario">Usuario o correo electrónico</label>
+
+                    <input class="form-control" type="text" id="usuario" placeholder="Ingresa tu usuario o correo">
+                    <label for="contrasena" class="mt-4">Contraseña</label>
+                    <input class="form-control" type="password" id="contrasena" placeholder="Ingresa tu contraseña">
+                    
+                    <section class="opciones mt-4">
+                        <section>
+                            <input type="checkbox" id="recordarme">
+                            <label for="recordarme">Recordarme</label>
+                        </section>
+
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </section>
+
+
+                    <button class="btn boton-ingresar mt-4" type="submit">Ingresar</button>
+
+
+                    <p class="continuar mt-4"> o continua con </p>
+
+                    <section class="row">
+                        <section class="col-6">
+                            <button class="btn boton-social" type="button">Google</button>
+                        </section>
+
+                        <section class="col-6">
+                            <button class="btn boton-social" type="button">Apple</button>
+                        </section>
+                    </section>
+
+                    <p class="registro-login mt-4">¿No tenés cuenta?<a href="register.html">Registrate</a></p>
+                </form>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Reservas - Habitat+</title>
+    <!-- Referencia a Bootstrap CSS (Azul Clásico) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <style>
+        .calendar-header {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            text-align: center;
+        }
+        .calendar-day {
+            min-height: 120px;
+            background-color: #ffffff;
+            vertical-align: top;
+            width: 14.28%;
+            padding: 6px;
+        }
+        .calendar-day.other-month {
+            background-color: #fcfcfc;
+            color: #bbb;
+        }
+        .day-number {
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+            display: block;
+        }
+        .reserva-item {
+            font-size: 0.75rem;
+            padding: 4px 6px;
+            border-radius: 4px;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+        .bg-quincho { background-color: #0d6efd; } /* Blue */
+        .bg-sum { background-color: #6f42c1; }     /* Purple */
+        .bg-cancha { background-color: #198754; }  /* Green */
+        .bg-piscina { background-color: #0dcaf0; color: #000; } /* Cyan */
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar Vecino en Azul Clásico de Bootstrap -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-verde shadow-sm" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4" href="portal.html">HABITAT+</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="portal.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reclamos.html">Mis Reclamos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="espacios.html">Espacios Comunes</a></li>
+                        <li class="nav-item"><a class="nav-link active fw-bold" href="reservas.html">Reservas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="seguridad.html">Seguridad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="infraestructura.html">Obras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="accion_social.html">Acción Social</a></li>
+                        <li class="nav-item"><a class="nav-link" href="telefonos.html">Teléfonos Útiles</a></li>
+                        <li class="nav-item dropdown ms-lg-2">
+                            <a class="nav-link dropdown-toggle text-white fw-bold" href="#" id="userDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                👤 Juan Pérez
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="perfil.html">👤 Mi Perfil</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="cerrar_sesion.html">🚪 Cerrar Sesión</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container py-5">
+
+        <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+            <div>
+                <h1 class="h3 text-primary fw-bold mb-1">Calendario de Reservas</h1>
+                <p class="text-muted mb-0">Visualizá los turnos agendados y la disponibilidad de los espacios comunes.</p>
+            </div>
+            <div>
+                <a href="espacios.html" class="btn btn-primary fw-semibold">+ Nueva Reserva</a>
+            </div>
+        </div>
+
+        <!-- Leyenda de Espacios -->
+        <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body py-3 d-flex flex-wrap align-items-center gap-3">
+                <span class="fw-bold small text-secondary me-2">Leyenda de Espacios:</span>
+                <span class="badge bg-quincho px-3 py-2">Quincho</span>
+                <span class="badge bg-sum px-3 py-2">Salón de Usos Múltiples</span>
+                <span class="badge bg-cancha px-3 py-2">Cancha Deportiva</span>
+                <span class="badge bg-piscina px-3 py-2">Piscina</span>
+            </div>
+        </div>
+
+        <!-- Vista Tipo Calendario Mensual (Agosto 2026) -->
+        <div class="card shadow-sm border-0 mb-5">
+            <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                <h2 class="h5 fw-bold mb-0 text-primary">Agosto 2026</h2>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-outline-secondary">&laquo; Anterior</button>
+                    <button type="button" class="btn btn-outline-primary active">Hoy</button>
+                    <button type="button" class="btn btn-outline-secondary">Siguiente &raquo;</button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-bordered mb-0">
+                        <thead>
+                            <tr class="calendar-header text-uppercase small">
+                                <th>Dom</th>
+                                <th>Lun</th>
+                                <th>Mar</th>
+                                <th>Mié</th>
+                                <th>Jue</th>
+                                <th>Vie</th>
+                                <th>Sáb</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Semanas de Agosto 2026 -->
+                            <tr>
+                                <!-- Jul 26 - 31 -->
+                                <td class="calendar-day other-month"><span class="day-number">26</span></td>
+                                <td class="calendar-day other-month"><span class="day-number">27</span></td>
+                                <td class="calendar-day other-month"><span class="day-number">28</span></td>
+                                <td class="calendar-day other-month"><span class="day-number">29</span></td>
+                                <td class="calendar-day other-month"><span class="day-number">30</span></td>
+                                <td class="calendar-day other-month"><span class="day-number">31</span></td>
+                                <!-- Aug 1 -->
+                                <td class="calendar-day"><span class="day-number">1</span></td>
+                            </tr>
+                            <tr>
+                                <td class="calendar-day"><span class="day-number">2</span></td>
+                                <td class="calendar-day"><span class="day-number">3</span></td>
+                                <td class="calendar-day"><span class="day-number">4</span></td>
+                                <!-- Aug 5 -->
+                                <td class="calendar-day bg-light">
+                                    <span class="day-number text-primary">5</span>
+                                    <div class="reserva-item bg-quincho">
+                                        <strong>Quincho</strong><br>
+                                        🕒 19:00 - 00:00<br>
+                                        <span class="badge bg-success border mt-1">Confirmada</span>
+                                    </div>
+                                </td>
+                                <td class="calendar-day"><span class="day-number">6</span></td>
+                                <td class="calendar-day"><span class="day-number">7</span></td>
+                                <!-- Aug 8 -->
+                                <td class="calendar-day">
+                                    <span class="day-number">8</span>
+                                    <div class="reserva-item bg-sum">
+                                        <strong>SUM</strong><br>
+                                        🕒 18:00 - 01:00<br>
+                                        <span class="badge bg-success border mt-1">Confirmada</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="calendar-day"><span class="day-number">9</span></td>
+                                <!-- Aug 10 -->
+                                <td class="calendar-day">
+                                    <span class="day-number">10</span>
+                                    <div class="reserva-item bg-cancha">
+                                        <strong>Cancha</strong><br>
+                                        🕒 18:00 - 19:00<br>
+                                        <span class="badge bg-warning text-dark border mt-1">Pendiente</span>
+                                    </div>
+                                </td>
+                                <td class="calendar-day"><span class="day-number">11</span></td>
+                                <!-- Aug 12 -->
+                                <td class="calendar-day">
+                                    <span class="day-number">12</span>
+                                    <div class="reserva-item bg-piscina">
+                                        <strong>Piscina</strong><br>
+                                        🕒 10:00 - 14:00<br>
+                                        <span class="badge bg-success border mt-1">Confirmada</span>
+                                    </div>
+                                </td>
+                                <td class="calendar-day"><span class="day-number">13</span></td>
+                                <td class="calendar-day"><span class="day-number">14</span></td>
+                                <!-- Aug 15 -->
+                                <td class="calendar-day">
+                                    <span class="day-number">15</span>
+                                    <div class="reserva-item bg-quincho">
+                                        <strong>Quincho</strong><br>
+                                        🕒 11:00 - 16:00<br>
+                                        <span class="badge bg-success border mt-1">Confirmada</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="calendar-day"><span class="day-number">16</span></td>
+                                <td class="calendar-day"><span class="day-number">17</span></td>
+                                <td class="calendar-day"><span class="day-number">18</span></td>
+                                <td class="calendar-day"><span class="day-number">19</span></td>
+                                <!-- Aug 20 -->
+                                <td class="calendar-day">
+                                    <span class="day-number">20</span>
+                                    <div class="reserva-item bg-sum">
+                                        <strong>SUM</strong><br>
+                                        🕒 12:00 - 17:00<br>
+                                        <span class="badge bg-warning text-dark border mt-1">Pendiente</span>
+                                    </div>
+                                </td>
+                                <td class="calendar-day"><span class="day-number">21</span></td>
+                                <!-- Aug 22 -->
+                                <td class="calendar-day">
+                                    <span class="day-number">22</span>
+                                    <div class="reserva-item bg-cancha opacity-75">
+                                        <strong>Cancha</strong><br>
+                                        🕒 20:00 - 21:00<br>
+                                        <span class="badge bg-secondary border mt-1">Cancelada</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="calendar-day"><span class="day-number">23</span></td>
+                                <td class="calendar-day"><span class="day-number">24</span></td>
+                                <td class="calendar-day"><span class="day-number">25</span></td>
+                                <td class="calendar-day"><span class="day-number">26</span></td>
+                                <td class="calendar-day"><span class="day-number">27</span></td>
+                                <!-- Aug 28 -->
+                                <td class="calendar-day">
+                                    <span class="day-number">28</span>
+                                    <div class="reserva-item bg-piscina">
+                                        <strong>Piscina</strong><br>
+                                        🕒 15:00 - 19:00<br>
+                                        <span class="badge bg-success border mt-1">Confirmada</span>
+                                    </div>
+                                </td>
+                                <td class="calendar-day"><span class="day-number">29</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla Detallada de Reservas Agendadas -->
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white py-3 border-bottom">
+                <h2 class="h5 fw-bold mb-0 text-primary">Listado de Reservas Programadas</h2>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-primary">
+                            <tr>
+                                <th scope="col" class="py-3 ps-4">Espacio</th>
+                                <th scope="col" class="py-3">Fecha</th>
+                                <th scope="col" class="py-3">Horario</th>
+                                <th scope="col" class="py-3 text-center">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ps-4 fw-bold">Quincho</td>
+                                <td>05/08/2026</td>
+                                <td>19:00 - 00:00 hs</td>
+                                <td class="text-center"><span class="badge bg-success px-3 py-2">Confirmada</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 fw-bold">Salón de Usos Múltiples</td>
+                                <td>08/08/2026</td>
+                                <td>18:00 - 01:00 hs</td>
+                                <td class="text-center"><span class="badge bg-success px-3 py-2">Confirmada</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 fw-bold">Cancha Deportiva</td>
+                                <td>10/08/2026</td>
+                                <td>18:00 - 19:00 hs</td>
+                                <td class="text-center"><span class="badge bg-warning text-dark px-3 py-2">Pendiente</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 fw-bold">Piscina</td>
+                                <td>12/08/2026</td>
+                                <td>10:00 - 14:00 hs</td>
+                                <td class="text-center"><span class="badge bg-success px-3 py-2">Confirmada</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 fw-bold">Quincho</td>
+                                <td>15/08/2026</td>
+                                <td>11:00 - 16:00 hs</td>
+                                <td class="text-center"><span class="badge bg-success px-3 py-2">Confirmada</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 fw-bold">Salón de Usos Múltiples</td>
+                                <td>20/08/2026</td>
+                                <td>12:00 - 17:00 hs</td>
+                                <td class="text-center"><span class="badge bg-warning text-dark px-3 py-2">Pendiente</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 fw-bold">Cancha Deportiva</td>
+                                <td>22/08/2026</td>
+                                <td>20:00 - 21:00 hs</td>
+                                <td class="text-center"><span class="badge bg-secondary px-3 py-2">Cancelada</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 fw-bold">Piscina</td>
+                                <td>28/08/2026</td>
+                                <td>15:00 - 19:00 hs</td>
+                                <td class="text-center"><span class="badge bg-success px-3 py-2">Confirmada</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

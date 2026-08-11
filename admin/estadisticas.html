@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas del Consorcio - Habitat+</title>
+    <!-- Referencia a Bootstrap CSS (Azul Clásico) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <style>
+        .kpi-card {
+            border: none;
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+        }
+        .kpi-icon-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- Navbar Admin en Azul Clásico de Bootstrap -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-verde shadow-sm" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4" href="panel.html">HABITAT+ <span class="badge bg-light text-primary fs-6 align-middle ms-2">ADMIN</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="panel.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reclamos.html">Reclamos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="vecinos.html">Vecinos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="metricas.html">Métricas</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="estadisticas.html">Estadísticas</a></li>
+                        <li class="nav-item dropdown ms-lg-2">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                👤 Admin
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="adminDropdown">
+                                <li><a class="dropdown-item text-danger" href="cerrar_sesion.html">🚪 Cerrar Sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container py-5">
+
+        <!-- Header de la sección -->
+        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+            <div>
+                <h1 class="h3 text-primary fw-bold mb-1">Panel de Estadísticas e Indicadores</h1>
+                <p class="text-muted mb-0">Resumen general del estado financiero, operacional y de convivencia del consorcio.</p>
+            </div>
+            <span class="badge bg-primary px-3 py-2 fs-6">Gestión 2026</span>
+        </div>
+
+        <!-- Grilla de 6 Tarjetas de Métricas KPI -->
+        <div class="row g-4 mb-5">
+
+            <!-- 1. Vecinos Registrados -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card kpi-card shadow-sm h-100 p-3">
+                    <div class="card-body d-flex align-items-center justify-content-between">
+                        <div>
+                            <span class="text-muted small text-uppercase fw-semibold">Vecinos Registrados</span>
+                            <h2 class="display-6 fw-bold text-dark my-1">148</h2>
+                            <span class="badge bg-success bg-opacity-10 text-success fw-semibold">↑ +12% este mes</span>
+                        </div>
+                        <div class="kpi-icon-box bg-primary bg-opacity-10 text-primary">
+                            👥
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Reclamos Pendientes -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card kpi-card shadow-sm h-100 p-3">
+                    <div class="card-body d-flex align-items-center justify-content-between">
+                        <div>
+                            <span class="text-muted small text-uppercase fw-semibold">Reclamos Pendientes</span>
+                            <h2 class="display-6 fw-bold text-warning my-1">5</h2>
+                            <span class="badge bg-warning bg-opacity-10 text-warning text-dark fw-semibold">2 de alta prioridad</span>
+                        </div>
+                        <div class="kpi-icon-box bg-warning bg-opacity-10 text-warning">
+                            ⚠️
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Reclamos Resueltos -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card kpi-card shadow-sm h-100 p-3">
+                    <div class="card-body d-flex align-items-center justify-content-between">
+                        <div>
+                            <span class="text-muted small text-uppercase fw-semibold">Reclamos Resueltos</span>
+                            <h2 class="display-6 fw-bold text-success my-1">42</h2>
+                            <span class="badge bg-success bg-opacity-10 text-success fw-semibold">92% de resolución</span>
+                        </div>
+                        <div class="kpi-icon-box bg-success bg-opacity-10 text-success">
+                            ✅
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Reservas del Mes -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card kpi-card shadow-sm h-100 p-3">
+                    <div class="card-body d-flex align-items-center justify-content-between">
+                        <div>
+                            <span class="text-muted small text-uppercase fw-semibold">Reservas del Mes</span>
+                            <h2 class="display-6 fw-bold text-info my-1">38</h2>
+                            <span class="badge bg-info bg-opacity-10 text-info text-dark fw-semibold">SUM y Quincho al 90%</span>
+                        </div>
+                        <div class="kpi-icon-box bg-info bg-opacity-10 text-info">
+                            📅
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Expensas Cobradas -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card kpi-card shadow-sm h-100 p-3">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div>
+                                <span class="text-muted small text-uppercase fw-semibold">Expensas Cobradas</span>
+                                <h2 class="h3 fw-bold text-primary my-1">$ 4.850.000</h2>
+                            </div>
+                            <div class="kpi-icon-box bg-primary bg-opacity-10 text-primary">
+                                💵
+                            </div>
+                        </div>
+                        <div class="progress mt-2" style="height: 8px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="small text-muted mt-1 d-block">88% del total emitido ($ 5.500.000)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Obras en Ejecución -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card kpi-card shadow-sm h-100 p-3">
+                    <div class="card-body d-flex align-items-center justify-content-between">
+                        <div>
+                            <span class="text-muted small text-uppercase fw-semibold">Obras en Ejecución</span>
+                            <h2 class="display-6 fw-bold text-dark my-1">3</h2>
+                            <span class="badge bg-secondary bg-opacity-10 text-secondary fw-semibold">Paneles, Cocheras, Ascensor</span>
+                        </div>
+                        <div class="kpi-icon-box bg-secondary bg-opacity-10 text-secondary">
+                            🏗️
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sección de Gráficos Simulados (Maquetado Visual) -->
+        <div class="row g-4">
+
+            <!-- Gráfico Simulado 1: Recaudación de Expensas -->
+            <div class="col-12 col-lg-7">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                        <h2 class="h5 fw-bold mb-0 text-primary">Recaudación de Expensas (Últimos 6 meses)</h2>
+                        <span class="badge bg-light text-dark border">Gráfico Simulado</span>
+                    </div>
+                    <div class="card-body p-4 text-center">
+                        <!-- Maquetado de barras SVG visuales -->
+                        <div class="d-flex align-items-end justify-content-around h-100 pt-4 pb-2" style="min-height: 220px;">
+                            <div class="d-flex flex-column align-items-center" style="width: 12%;">
+                                <span class="small fw-bold mb-1">$3.9M</span>
+                                <div class="bg-primary opacity-50 w-100 rounded-top" style="height: 120px;"></div>
+                                <span class="small text-muted mt-2">Mar</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center" style="width: 12%;">
+                                <span class="small fw-bold mb-1">$4.1M</span>
+                                <div class="bg-primary opacity-75 w-100 rounded-top" style="height: 135px;"></div>
+                                <span class="small text-muted mt-2">Abr</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center" style="width: 12%;">
+                                <span class="small fw-bold mb-1">$4.3M</span>
+                                <div class="bg-primary opacity-75 w-100 rounded-top" style="height: 150px;"></div>
+                                <span class="small text-muted mt-2">May</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center" style="width: 12%;">
+                                <span class="small fw-bold mb-1">$4.5M</span>
+                                <div class="bg-primary w-100 rounded-top" style="height: 170px;"></div>
+                                <span class="small text-muted mt-2">Jun</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center" style="width: 12%;">
+                                <span class="small fw-bold mb-1">$4.7M</span>
+                                <div class="bg-primary w-100 rounded-top" style="height: 185px;"></div>
+                                <span class="small text-muted mt-2">Jul</span>
+                            </div>
+                            <div class="d-flex flex-column align-items-center" style="width: 12%;">
+                                <span class="small fw-bold text-success mb-1">$4.8M</span>
+                                <div class="bg-success w-100 rounded-top" style="height: 195px;"></div>
+                                <span class="small fw-bold text-dark mt-2">Ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráfico Simulado 2: Distribución de Reclamos por Categoría -->
+            <div class="col-12 col-lg-5">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
+                        <h2 class="h5 fw-bold mb-0 text-primary">Reclamos por Categoría</h2>
+                        <span class="badge bg-light text-dark border">Distribución</span>
+                    </div>
+                    <div class="card-body p-4">
+                        
+                        <!-- Categoría 1: Plomería -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                <span>Plomería e Hidráulica</span>
+                                <span class="text-primary">35% (16 reclamos)</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-primary" style="width: 35%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Categoría 2: Ascensores -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                <span>Ascensores y Maquinarias</span>
+                                <span class="text-warning">25% (12 reclamos)</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-warning" style="width: 25%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Categoría 3: Electricidad -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                <span>Electricidad e Iluminación</span>
+                                <span class="text-info">20% (9 reclamos)</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-info" style="width: 20%"></div>
+                            </div>
+                        </div>
+
+                        <!-- Categoría 4: Limpieza y Áreas Comunes -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between small fw-semibold mb-1">
+                                <span>Limpieza y Mantenimiento</span>
+                                <span class="text-success">20% (9 reclamos)</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" style="width: 20%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
